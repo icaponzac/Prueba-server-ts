@@ -1,6 +1,6 @@
 import { envs } from "./config";
-import { AuthRoutes } from "./presentation";
 import { Server } from "./presentation/server"
+import { appRoute } from "./routes";
 
 
 (()=>{
@@ -11,7 +11,7 @@ function main(){
 
     new Server({
         port: envs.PORT,
-        router: AuthRoutes.router,
+        router: appRoute.router,
     })
         .start();
 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { AuthRoutes } from "./presentation";
+import { AuthRoutes } from "./presentation/auth/routes";
 
 
 export class appRoute {
@@ -9,7 +9,7 @@ export class appRoute {
         const router = Router();
 
         //Rutas principales definidas
-        router.use('/api', AuthRoutes.router );
+        router.use('/api/auth', AuthRoutes.router )
 
         return router;
     }
